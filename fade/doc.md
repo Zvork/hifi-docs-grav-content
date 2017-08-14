@@ -1,0 +1,32 @@
+# Fade effect
+
+TODO event types
+
+## Description
+
+### Gradients
+The fade effect is based on the thresholding of a gradient in 3D space. The gradient has values between 0 and 1. When the gradient has a value beneath a user defined threshold, the object is transparent. This gradient is the sum of a base radial gradient centered on the object's position (with value 0 at this position) and a noise gradient. Each base and noise gradient level can be modified as well as the size of these gradients in the three dimensions. The center of the base gradient is furthermore offset in position depending on the type of fade event.
+The threshold result can be inverted with the "Invert" check box in which case the transparent pixels correspond to gradient values above the threshold.
+
+### Edges
+The outer edge of the fade effect is the limit between transparent and opaque pixels. The inner edge is set with the "edge width" parameter, between 0 and 1 as a ratio of the gradient size. Both edges have separate colors and color intensities, in the emissive channel.
+
+### Noise
+The 3D noise is created semi-procedurally. While it is based on an image (*interface/resources/images/fadeMask.png*), this image, at this time, is only used to seed the procedural noise. For this reason, the image has an influence on the overall look of the noise (for instance a smoothly varying *fadeMask.png* will give a rounder looking noise) but it doesn't ncessarily imply a direct visual correspondance in the 3D noise. At this time only the red channel of the *fadeMask.png* image is used in the output noise.
+
+## Fade editing
+The debugFade.js script in scriptsdeveloperutilitiesrender can be used to tweak the fade effect on the 4 supported events, the above two being the only ones processed in the application at this time. Checking the "Edit Fade" checkbox applies cyclicly the selected fade event to the object in front of you. To manually control the threshold value, click on "Manual" under "Edit Fade". In this mode, the "Threshold" slider controls the value.
+All changes to the various fade parameters apply to the currently selected event.
+
+### Parameters
+
+| Name                                     | Description                             | Examples |
+|----------                                |--------                                 |-------   |
+| Edit Fade (checkbox and dropdown list)   | Applies a fade event to a picked object |          |
+
+### Save
+Clicking on the save button saves a JSON configuration file under interface/resources/config with name corresponding to the currently edited event. This file contains the current settings only for the edited event.
+Warning : all saves will overwrite the same file so if you wish to keep multiple settings, you must copy the files to another location.
+### Load
+Clicking on the load button loads back the settings stored in the JSON configuration file under interface/resources/config with name corresponding to the currently edited event.
+Note: the JSON configuration files are not automatically loaded at launch time.
