@@ -14,6 +14,7 @@ The "fade effect" is a transitionary visual effect applied to objects when certa
 
 ### Gradients
 The fade effect is based on the thresholding of a gradient in 3D space. The gradient has values between 0 and 1. When the gradient has a value beneath a user defined threshold, the object is transparent. This gradient is the sum of a base radial gradient centered on the object's position (with value 0 at this position) and a noise gradient. Each base and noise gradient level can be modified as well as the size of these gradients in the three dimensions. The center of the base gradient is furthermore offset in position depending on the type of fade event.
+![2D gradient equivalent](/fade/gradients.jpg "2D equivalent (from left to right) : base gradient (here a linear ramp), noise gradient and resulting mix of the two with threshold at 0.4")
 The threshold result can be inverted with the "Invert" check box in which case the transparent pixels correspond to gradient values above the threshold.
 
 ### Edges
