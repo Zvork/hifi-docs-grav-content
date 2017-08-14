@@ -58,7 +58,9 @@ Here is the list of the paramters of the fade effect from top to bottom and left
 
 ### Save
 Clicking on the save button saves a JSON configuration file under interface/resources/config with name corresponding to the currently edited event. This file contains the current settings only for the edited event.
-Warning : all saves will overwrite the same file so if you wish to keep multiple settings, you must copy the files to another location.
+
+**WARNING** : all saves will overwrite the same file so if you wish to keep multiple settings, you must copy the files to another location.
+
 ### Load
 Clicking on the load button loads back the settings stored in the JSON configuration file under interface/resources/config with name corresponding to the currently edited event.
 
