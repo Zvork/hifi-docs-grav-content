@@ -4,9 +4,11 @@ The "fade effect" is a transitionary visual effect applied to objects when certa
 
 | Event | Description | Application status | Edition status |
 |-----  |-----        |-----               |-----           |
-| *Elements enter/leave domain* | This event should occur when entities are loaded for the first time and are ready to be displayed after the user enters a new domain | The application applies this fade event only to model entities. | Edition is possible on model, polyvoxel and polyline entities |
-| *Bubble isect. - Owner POV* | This event should occur when entities are loaded for the first time and are ready to be displayed after the user enters a new domain | The application applies this fade event only to model entities. | Edition is possible on model, polyvoxel and polyline entities |
-
+| *Elements enter/leave domain* | This event should occur when entities are loaded for the first time and are ready to be displayed after the user enters a new domain | The application applies this fade event only to model entities. | Edition is possible on model, avatars, polyvoxel and polyline entities |
+| *Bubble intersection - Owner POV* | This event should occur when a user with his bubble activated has his avatar's bubble intersect another avatar | The application doesn't manage this event | Edition is possible on model, avatars, polyvoxel and polyline entities |
+| *Bubble intersection - Trespasser POV* | This event should occur when a user's avatar trespasses on another user's avatar which has an enabled bubble | The application doesn't manage this event | Edition is possible on model, avatars, polyvoxel and polyline entities |
+| *Another user leaves/arrives* | This event should occur when a user's avatar enters or leaves a domain | The application launches this domain normally | Edition is possible on model, avatars, polyvoxel and polyline entities |
+| *Changing an avatar* | This event should occur when a user changes the appearance of his avatar | The application doesn't manage this event | Edition isn't supported and is ignored |
 
 ## Description
 
@@ -59,4 +61,4 @@ Warning : all saves will overwrite the same file so if you wish to keep multiple
 ### Load
 Clicking on the load button loads back the settings stored in the JSON configuration file under interface/resources/config with name corresponding to the currently edited event.
 
-**Note**: the JSON configuration files are not automatically loaded at launch time.
+**WARNING**: the JSON configuration files are not automatically loaded at launch time.
