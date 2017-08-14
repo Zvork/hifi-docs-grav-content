@@ -29,7 +29,7 @@ Here is the list of the paramters of the fade effect from top to bottom and left
 
 | Name                                   | Description                                                                       | Examples |
 |----------                              |--------                                                                           |-------   |
-| Edit Fade (checkbox and dropdown list) | Applies a fade event of the type selected in the dropdown list to a picked object |          |
+| Edit Fade (checkbox and dropdown list) | Applies a fade event of the type selected in the dropdown list to a picked object | ![Element enter event]("Fade-Edit On.jpg" "Element enter/leave event applied") |
 | Manual (checkbox)                      | When enabled, enables to manually sets the threshold value                        |          |
 | Threshold (slider)                     | The threshold value in *manual* mode                                              |          |
 | Invert (checkbox)                      | Inverts the thresholding behavior                                                 |          |
