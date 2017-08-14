@@ -1,6 +1,12 @@
 # Fade effect
 
-TODO event types
+The "fade effect" is a transitionary visual effect applied to objects when certain events occur. Six event types have been identified, each in various states of implementation both in the application and when edited (see paragraphs below for editing the effect).
+
+| Event | Description | Application status | Edition status |
+|-----  |-----        |-----               |-----           |
+| *Elements enter/leave domain* | This event should occur when entities are loaded for the first time and are ready to be displayed after the user enters a new domain | The application applies this fade event only to model entities. | Edition is possible on model, polyvoxel and polyline entities |
+| *Bubble isect. - Owner POV* | This event should occur when entities are loaded for the first time and are ready to be displayed after the user enters a new domain | The application applies this fade event only to model entities. | Edition is possible on model, polyvoxel and polyline entities |
+
 
 ## Description
 
