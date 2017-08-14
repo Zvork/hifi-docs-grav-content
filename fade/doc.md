@@ -27,7 +27,7 @@ The *debugFade.js* script in *scripts/developer/utilities/render* can be used to
 All changes to the various fade parameters apply to the currently selected event.
 
 ### Parameters
-Here is the list of the paramters of the fade effect from top to bottom and left to right in the edit window.
+Here is the list of the paramters of the fade effect from top to bottom and left to right in the edit window. For the *Another user leaves/arrives* event, the **base gradient size** is driven automatically by the application and is set to the objects bounding box dimensions. When this event is selected, changing the base gradient size in the edit window will be ignored.
 
 | Name                                   | Description                                                                       | Examples |
 |----------                              |--------                                                                           |-------   |
