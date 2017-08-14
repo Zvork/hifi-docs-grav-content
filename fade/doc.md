@@ -19,19 +19,33 @@ The *debugFade.js* script in *scripts/developer/utilities/render* can be used to
 All changes to the various fade parameters apply to the currently selected event.
 
 ### Parameters
+Here is the list of the paramters of the fade effect from top to bottom and left to right in the edit window.
 
 | Name                                   | Description                                                                       | Examples |
 |----------                              |--------                                                                           |-------   |
 | Edit Fade (checkbox and dropdown list) | Applies a fade event of the type selected in the dropdown list to a picked object |          |
-| Manual (fader)                         | Manually sets the threshold value                                                 |          |
+| Manual (checkbox)                      | When enabled, enables to manually sets the threshold value                        |          |
+| Threshold (slider)                     | The threshold value in *manual* mode                                              |          |
 | Invert (checkbox)                      | Inverts the thresholding behavior                                                 |          |
 | Base Gradient                          | Parameters of the base radial gradient                                            |          |
-| > Size X, Y and Z                      | Controls the scale of the radial gradient in all three dimensions                 |          |
-| > Level                                | The level of contribution of the base radial gradient to the final gradient       |          |
+| > Size X, Y and Z (sliders)            | Controls the scale of the radial gradient in all three dimensions                 |          |
+| > Level (slider)                       | The level of contribution of the base radial gradient to the final gradient       |          |
 | Noise Gradient                         | Parameters of the 3D noise gradient                                               |          |
-| > Size X, Y and Z                      | Controls the scale of the noise gradient in all three dimensions                  |          |
-| > Level                                | The level of contribution of the noise gradient to the final gradient             |          |
-
+| > Size X, Y and Z (sliders)            | Controls the scale of the noise gradient in all three dimensions                  |          |
+| > Level (slider)                       | The level of contribution of the noise gradient to the final gradient             |          |
+| Edge                                   | Parameters of threshold edge                                                      |          |
+| > Width (slider)                       | Width of the edge in gradient value unit                                          |          |
+| > Inner color                          | Color and intensity parameters of the edge on the opaque side of the object       |          |
+| >> Color red, green and blue (sliders) | RGB color of the edge on the opaque side                                          |          |
+| >> Color intensity (slider)            | Intensity of the color. This value can be greater than 1                          |          |
+| > Outer color                          | Color and intensity parameters of the edge on the transparent side of the object  |          |
+| >> Color red, green and blue (sliders) | RGB color of the edge on the opaque side                                          |          |
+| >> Color intensity (slider)            | Intensity of the color. This value can be greater than 1                          |          |
+| Timing                                 | Parameters related to the animated elements of the fade events                    |          |
+| > Duration (slider)                    | The duration in seconds of an event (this only applies to both enter / leave events)                                          |          |
+| > Curve (dropdown list)                | The timing curve applied to the threhold value                                    |          |
+| > Noise animation                      | Parameters linked to the automatic noise gradient animation                       |          |
+| >> Speed X, Y, Z                       | Translation speed of the noise gradient in all 3 directions                       |          |
 
 ### Save
 Clicking on the save button saves a JSON configuration file under interface/resources/config with name corresponding to the currently edited event. This file contains the current settings only for the edited event.
