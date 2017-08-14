@@ -15,18 +15,28 @@ The outer edge of the fade effect is the limit between transparent and opaque pi
 The 3D noise is created semi-procedurally. While it is based on an image (*interface/resources/images/fadeMask.png*), this image, at this time, is only used to seed the procedural noise. For this reason, the image has an influence on the overall look of the noise (for instance a smoothly varying *fadeMask.png* will give a rounder looking noise) but it doesn't ncessarily imply a direct visual correspondance in the 3D noise. At this time only the red channel of the *fadeMask.png* image is used in the output noise.
 
 ## Fade editing
-The debugFade.js script in scriptsdeveloperutilitiesrender can be used to tweak the fade effect on the 4 supported events, the above two being the only ones processed in the application at this time. Checking the "Edit Fade" checkbox applies cyclicly the selected fade event to the object in front of you. To manually control the threshold value, click on "Manual" under "Edit Fade". In this mode, the "Threshold" slider controls the value.
+The *debugFade.js* script in *scripts/developer/utilities/render* can be used to tweak the fade effect on the 4 supported events, the above two being the only ones processed in the application at this time. Checking the "Edit Fade" checkbox applies cyclicly the selected fade event to the object in front of you. To manually control the threshold value, click on "Manual" under "Edit Fade". In this mode, the "Threshold" slider controls the value.
 All changes to the various fade parameters apply to the currently selected event.
 
 ### Parameters
 
-| Name                                     | Description                             | Examples |
-|----------                                |--------                                 |-------   |
-| Edit Fade (checkbox and dropdown list)   | Applies a fade event to a picked object |          |
+| Name                                   | Description                                                                       | Examples |
+|----------                              |--------                                                                           |-------   |
+| Edit Fade (checkbox and dropdown list) | Applies a fade event of the type selected in the dropdown list to a picked object |          |
+| Manual (fader)                         | Manually sets the threshold value                                                 |          |
+| Invert (checkbox)                      | Inverts the thresholding behavior                                                 |          |
+| Base Gradient                          | Parameters of the base radial gradient                                            |          |
+| > Size X, Y and Z                      | Controls the scale of the radial gradient in all three dimensions                 |          |
+| > Level                                | The level of contribution of the base radial gradient to the final gradient       |          |
+| Noise Gradient                         | Parameters of the 3D noise gradient                                               |          |
+| > Size X, Y and Z                      | Controls the scale of the noise gradient in all three dimensions                  |          |
+| > Level                                | The level of contribution of the noise gradient to the final gradient             |          |
+
 
 ### Save
 Clicking on the save button saves a JSON configuration file under interface/resources/config with name corresponding to the currently edited event. This file contains the current settings only for the edited event.
 Warning : all saves will overwrite the same file so if you wish to keep multiple settings, you must copy the files to another location.
 ### Load
 Clicking on the load button loads back the settings stored in the JSON configuration file under interface/resources/config with name corresponding to the currently edited event.
-Note: the JSON configuration files are not automatically loaded at launch time.
+
+**Note**: the JSON configuration files are not automatically loaded at launch time.
